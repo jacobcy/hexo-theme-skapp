@@ -22,8 +22,8 @@
         </h3>
         <p class="mini-article__author">by 
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" href="{{ post.author.link }}" target="_blank">
-                    <span itemprop="name">{{ titlecase(post.author.nick) }}</span>
+                <a itemprop="url" href="{{ author_to_url(post.author) }}" target="_blank">
+                    <span itemprop="name">{{ titlecase(post.editor.name) }}</span>
                 </a>
             </span>
         </p>

@@ -1,7 +1,9 @@
 <article class="page__post">
-    <div class="post__cover">
-        <img src="{{ page.cover|default(get_setting('default_cover')) }}" alt="{{ page.title }}">
-    </div>
+    {% if config.show_cover %}
+        <div class="post__cover">
+            <img src="{{ page.cover|default(get_setting('default_cover')) }}" alt="{{ page.title }}">
+        </div>
+    {% endif %}
 
     <header class="post__info">
         <h1 class="post__title">{{ page.title }}</h1>
@@ -11,7 +13,7 @@
                 <i class="mark__icon iconfont icon-write"></i>
                 <ul class="mark__list clearfix">
                     <li class="mark__item">
-                        <a href="{{ url_for(page.author.link || '') }}">{{ page.author.nick|default(get_setting(author.name)) }}</a>
+                        <a href="{{ author_to_url(page.author) }}">{{ page.editor.name|default(get_setting(author.name)) }}</a>
                     </li>
                 </ul>
             </div>

@@ -37,7 +37,10 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: auto;
+    // 首页文章缩略图设置最大高度
+    height: 160px;
+    // 首页文章缩略图居中显示
+    display: flex;
 
     &::before {
         content: '';
@@ -54,6 +57,8 @@ body {
 
     & > img {
         display: block;
+        // 首页文章缩略图居中显示
+        align-self: center;
         width: 100%;
     }
 

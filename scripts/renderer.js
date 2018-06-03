@@ -111,15 +111,15 @@ hexo.extend.generator.register('lunr', function(locals){
                 date: moment(post.date).locale('zh-cn').format(),
                 day: moment(post.date).locale('zh-cn').format('D'),
                 month: (language == 'en'?moment(post.date).locale('en').format('MMM'):moment(post.date).locale('zh-cn').format('MMMM')),
-                authorLink: post.author 
-                    && post.author.link 
+                authorLink: post.editor
+                    && post.editor.link 
                     || hexo.config.author
                     && hexo.config.author.link
                     || hexo.theme.author
                     && hexo.theme.author.link
                     || '/',
-                authorNick: post.author
-                    && post.author.nick
+                authorNick: post.editor
+                    && post.editor.name
                     || hexo.config.author
                     && hexo.config.author.name
                     || hexo.theme.author
