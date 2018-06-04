@@ -47,6 +47,11 @@ body {
     padding: 0 $pad;
 }
 
+.page__neck {
+  position: relative;
+  display: flex;
+}
+
 .page__main {
     display: flex;
     flex-wrap: wrap;

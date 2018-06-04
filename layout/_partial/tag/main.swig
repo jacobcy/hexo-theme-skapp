@@ -2,7 +2,7 @@
 
 <main class="page__container page__main">
     <div class="page__content">
-        <div class = "page__header clearfix">
+        <div class = "page__neck clearfix">
             <span>标签目录</span>
         </div>
         <div class="page__posts clearfix">
