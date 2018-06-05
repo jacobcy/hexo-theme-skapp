@@ -53,13 +53,13 @@
         {% if page.editor %}
         <div class="post-announce">
             {{ __('copyright_statement.one') }}
-            <a href="{{ page.editor.link }}">{{ page.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ page.editor.name }}（<a href="{{ page.editor.link }}">{{ page.editor.link }}</a>）
+            <a href="{{ author_to_url(page.author) }}">{{ page.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ page.editor.name }}（<a href="{{ page.editor.link }}">{{ __('copyright_statement.five') }}</a>）
         </div> 
         {% else %}
         <div class="post-announce">
             {{ __('copyright_statement.three') }}
             <a href="{{ config.url }}">{{ get_setting('title') }}</a>
-            {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(page.path) }}">{{ config.url }}{{ url_for(page.path) }}</a>）
+            {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(page.path) }}">{{ __('copyright_statement.five') }}</a>）
         </div>
         {% endif %}
 
