@@ -119,8 +119,7 @@ hexo.extend.generator.register('lunr', function (locals) {
         date: moment(post.date).locale('zh-cn').format(),
         day: moment(post.date).locale('zh-cn').format('D'),
         month: (language == 'en' ? moment(post.date).locale('en').format('MMM') : moment(post.date).locale('zh-cn').format('MMMM')),
-        authorLink: author_to_url(post.author) ||
-          post.editor &&
+        authorLink: post.editor &&
           post.editor.link ||
           hexo.config.author &&
           hexo.config.author.link ||
