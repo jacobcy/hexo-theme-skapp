@@ -3,7 +3,7 @@
     <div class="page__content">
         <div class = "page__neck clearfix">
             <span>作者目录</span>
-        </div>    
+        </div>
         <div class="page__posts clearfix">
             {% for post in page.posts %}
                 <div class="page__post">

@@ -32,13 +32,15 @@
         </p>
         <div class="min-article__tags">
             <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                {% for tag in post.tags %}
-                    <li class="tags__item">
-                        <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+            <div class="tags__area">
+              <ul class="tags__list clearfix">
+                  {% for tag in post.tags %}
+                      <li class="tags__item">
+                          <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
+                      </li>
+                  {% endfor %}
+              </ul>
+            </div>
         </div>
     </div>
 </article>

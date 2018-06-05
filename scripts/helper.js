@@ -214,7 +214,7 @@ hexo.extend.helper.register('get_setting', function(...keys) {
 
 hexo.extend.helper.register('tags', function() {
     let tags = this.site.tags.sort('name', 1).filter(tag => tag.length);
-
+    tags = tags.filter(() => Math.random() > 0.5).slice(0,20);
     return `
         <ul class="block-list tag-list clearfix">
             ${ tags.reduce((p, item) => {
