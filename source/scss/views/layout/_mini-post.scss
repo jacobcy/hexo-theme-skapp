@@ -160,7 +160,8 @@ body {
     }
 
     .tags__area {
-      overflow: hidden;
+      min-width: 0;
+      line-height: 28px;
 
       .tags__list {
         margin: 0;
@@ -168,6 +169,8 @@ body {
         list-style: none;
         vertical-align: middle;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .tags__item {
